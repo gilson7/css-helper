@@ -56,39 +56,6 @@ function carregar(){
   
 }
 
-
-
-
-
-
-// function choice(choice){
-// 	if(choice==1){
-// 		window.location.href="index.html"
-// 		openMenu(0)
-// 	}
-// 	if(choice==2){
-// 		window.location.href="http://drumseven.ezyro.com"
-// 		openMenu(0)
-// 	}
-// 	if(choice==3){
-		
-// 		shareWin.style.transform="scale(1)"
-// 		if(displayType=="desktop"){menu.style.transform="translateX(0)"}
-		
-// 		openMenu(0)
-// 	}
-// }
-// function winClose(){
-// 	shareWin.style.transform="scale(0)"
-// }
-
-// function mshare(url){
-// 	window.open(url, '_blank')
-// }
-
-
-
-
 ////////////
 let cont = document.getElementById("conteudo")
 let html=""
@@ -103,27 +70,31 @@ function def(m){
 					<div class="contImg">
 						<img src="${obj[name]}" alt="${obj[index]}" class="art">
 					</div>
-					<div class="title" translate="no">
-						${pubObj[index]}
+					<div class="info">
+						<div class="title" translate="no">
+							${pubObj[index]}
+						</div>
+						<div class="buttons" translate="no">
+							<a download>
+								<button class="downloadButton" onclick="downloadImg('${obj[name]}')">
+									<span class="material-symbols-outlined">
+										file_download
+									</span>
+								</button>
+							</a>
+							<button class="likeButton">
+								<span class="material-symbols-outlined">
+									thumb_up
+								</span>
+							</button>
+							<button class="nolikeButton">
+								<span class="material-symbols-outlined">
+									thumb_down
+								</span>
+							</button>
+						</div>
 					</div>
-					<div class="buttons" translate="no">
-					<a download>
-						<button class="downloadButton" onclick="downloadImg('${obj[name]}')">
-							<span class="material-symbols-outlined">
-								file_download
-							</span>
-						</button></a>
-					<button class="likeButton">
-						<span class="material-symbols-outlined">
-							thumb_up
-						</span>
-					</button>
-					<button class="nolikeButton">
-						<span class="material-symbols-outlined">
-							thumb_down
-						</span>
-					</button>
-				</div>
+					
 				</div>
 
 
@@ -174,7 +145,7 @@ let htmlInicio=`
 	</div>
 	
 		<div id="cardBottonRight" class="card">
-			<a href="http://drumseven.ezyro.com/?i=1">
+			<a href="https://gseven.me/portfolio">
 				<div class="cardText">
 					<h1>More apps</h1>
 					<span>
@@ -232,51 +203,6 @@ function cardRightClick(){
 	document.getElementById("openMenu").click()
 }
 var option = "inicio"
-// function loadSave() {
-// 	if(localStorage.getItem('option')==undefined){
-// 		option=="inicio"
-// 	}else
-// 	option  = localStorage.getItem("option")
-// 	if(option=="inicio"){
-// 		inicio()
-// 		document.getElementById("openMenu").click()
-// 		// 00000000000000000000000000000000
-// 		iniciov.removeAttribute('class'); 
-// 		iniciov.setAttribute('class','btn active')
-
-// 		artesv.removeAttribute('class'); 
-// 		artesv.setAttribute('class','btn')
-
-// 		sharev.removeAttribute('class'); 
-// 		sharev.setAttribute('class','btn')
-// 	}
-// 	else if(option=="artes"){
-// 		artes()
-// 		document.getElementById("openMenu").click()
-// 		// 00000000000000000000000000000000
-// 		iniciov.removeAttribute('class'); 
-// 		iniciov.setAttribute('class','btn ')
-
-// 		artesv.removeAttribute('class'); 
-// 		artesv.setAttribute('class','btn active')
-
-// 		sharev.removeAttribute('class'); 
-// 		sharev.setAttribute('class','btn')
-// 	}
-// 	else if(option=="share"){
-// 		share()
-// 		document.getElementById("openMenu").click()
-// 		// 00000000000000000000000000000000
-// 		iniciov.removeAttribute('class'); 
-// 		iniciov.setAttribute('class','btn ')
-
-// 		artesv.removeAttribute('class'); 
-// 		artesv.setAttribute('class','btn')
-
-// 		sharev.removeAttribute('class'); 
-// 		sharev.setAttribute('class','btn active')
-// 	}
-// }
 function logoFunction(){
 	localStorage.setItem('option','inicio') 
 	document.location.reload()

@@ -91,17 +91,3 @@ function contact(inst){
     break
   }
 }
-let led = document.getElementById("brd")
-let glow = document.getElementById("profile")
-let i = 50
-setInterval(() => {
-  if (i < 359) {
-      i += 10;
-  } else {
-      i = 0;
-  }
-  led.style.background = `
-  linear-gradient(${i}deg,rgb(150 0 20) 0%, rgb(0, 174, 255) 100%)
-  `;
-  glow.style.background = led.style.background;
-}, 50);
