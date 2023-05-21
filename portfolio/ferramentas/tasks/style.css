@@ -1,5 +1,16 @@
+:root{
+    --cl1:rgb(248, 244, 244);
+    --cl2:rgb(235, 235, 235);
+    --cl3:rgb(163, 163, 163);
+    --cl4:rgb(14, 14, 14);
+    --red:rgb(255, 79, 79);
+    --yellow:rgb(255, 208, 0);
+}
+html {
+    scroll-behavior: smooth;
+  }
 body{
-    background-color: rgb(22, 22, 22);
+    background-color: var(--cl1);
     
     align-items: center;
     margin: 0%;
@@ -7,60 +18,23 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     overflow-y:hidden;
-
-
-
-
-}
-#background{
-    background-size: 150px;
-    background-image: url(icones/backtexture.png);
-    width: 100%;
-    position: fixed;
-    height: 100vh;
-    opacity: 60%;
-    pointer-events: none;
-
-    
-
-}
-#texture{
-    position: fixed;
-    width: 95%;
-    height: 67px;
-    background-color: rgba(106, 94, 82, 0);
-    background-image: url(icones/backtexture.png);
-    background-size: 120px;
-    top: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding:10px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 100%;
 }
 
 #logo{
-    width: 120px;
+    width: 100%;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
 }
 #logobody{
-    width: 140px;
+    width: 80px;
     margin-left: auto;
     margin-right: auto;
-    height: 67px;
-
-    background-color: rgba(168, 11, 11, 0);
+    height: 37px;
+    background-color: transparent;
     border-radius: 10px;
-    
-
 }
 
 #logolink{
@@ -69,34 +43,25 @@ body{
     
 }
 #ups{
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    background-color: yellow;
-    padding: 10px;
+    background: var(--cl3);
+    background-color: var(--cl1);
     margin: 0;
     z-index: 10;
     position: fixed;
-    width: 95%;
+    width: 100%;
+    height: 50px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.0px rgba(202, 108, 0, 0);
     margin-top: 0;
-    box-shadow:0 0  40px 10px rgba(0, 0, 0, 0.063);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom:solid 2px rgba(0, 0, 0, 0.13);
 }
 #mais{
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
     margin-left: 8px;
     transition: 70ms;
     outline: none;
-    background-color:yellow;
+    background-color:var(--cl2);
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -104,7 +69,6 @@ body{
     font-size: 60px;
     top: 0px;
     text-align: center;
-    color: rgb(53, 53, 53);
     cursor: pointer;
     user-select: none;
     font-weight: 900;
@@ -117,61 +81,27 @@ body{
     bottom:0;
     right:0;
     margin-bottom: 30px;
-    box-shadow:0 0  10px 5px rgba(0, 0, 0, 0.13);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
-
-    
+    box-shadow: 0 7px 12px 0px rgba(0, 0, 0, 0.377);
+    outline: solid 2px rgba(0, 0, 0, 0.171);
 }
 #mais img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    filter: brightness(0);
+    filter: brightness(0.5) grayscale(100%);
+
     transform: rotate(45deg);
     -webkit-user-drag: none;
 }
 #mais:hover{
     transform: scale(0.97) ;
-    box-shadow:0 0  7px 3px rgba(0, 0, 0, 0.138);
   
 }
 #mais:active{
     transform: scale(0.90) ;
 }
-#x{
-    position: absolute;
-    transition: 200ms;
-    width: 32px;
-    height: 32px;
-    color: rgb(24, 24, 24);
-    border-radius: 10px;
-    text-align: center;
-    line-height: 26px;
-    float: right;
-    right: 13px;
-    margin-top: 7px;
-    cursor: pointer;
-    font-weight: 900;
-    font-size: 0px;
-    user-select: none;
-    background-color: rgb(24, 24, 24);
-    box-shadow:0 0  7px 3px rgba(0, 0, 0, 0.165);
-    color: yellow;
-    background-image: url(icones/x.png);
-    background-size: 22px;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 80;
-}
-#x:hover{
-    background-color:rgb(255, 0, 0) ;
-   
 
-}
 a{
     text-decoration: none;
 }
@@ -180,42 +110,22 @@ a{
 #titulo{
     
     text-align: center;
-    color: rgb(255, 255, 0);
-    background-color: rgba(39, 39, 39, 0.967);
     width: 70px;
     margin-left: auto;    
     margin-right: auto;
-    border: solid 4px rgb(255, 247, 0);
     border-radius: 400px;
     height: 70px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 69px;
-    box-shadow: 0 0 20px 3px hsla(0, 0%, 0%, 0.192);
+   
     
 }
-#tittle{
-    background: rgb(24,24,24);
-    background: linear-gradient(90deg, rgba(24,24,24,1) 16%, rgba(29,29,29,0.4935330976863753) 49%, rgba(41,41,41,0) 71%, rgba(48,48,48,0) 100%);
-    margin-top: 7px;
-    display: block;
-    margin-left: 0.1%;
-    height: 30px;
-    width: 95%;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    color: yellow;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 20px;
-    font-weight: 800;
-}
+
 h1{
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.323);
     margin: 0;
     font-size: 20px;
     vertical-align: middle;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Odibee Sans', cursive;
 }
 
 
@@ -230,7 +140,7 @@ h1{
     display: inline;
     position: fixed;
     font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Odibee Sans', cursive;
     user-select: none;
 }
 .cons{
@@ -252,193 +162,163 @@ h1{
 
 
 }
+#topbar{
+    background-color: var(--cl1);
+    width:100% ;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Odibee Sans', cursive;
+    border-radius:   10px;
+
+}
+#tittle{
+
+    display: block;
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: var(--cl4);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Odibee Sans', cursive;
+    padding-left:10px ;
+    background-color: var(--cl1);
+
+}
+#x{
+    margin-right: 5px;
+    transition: 200ms;
+    width: 34px;
+    height: 25px;
+    text-align: center;
+    line-height: 20px;
+    float: right;
+    cursor: pointer;
+    font-weight: 100;
+    font-family: consolas;
+    user-select: none;
+    background-color: transparent;
+    color: var(--red);
+    z-index: 80;
+    font-size:30px;
+    border-radius: 10px;
+}
+#x:hover{
+    background-color: var(--red);
+     color: var(--cl1);
+     
+ }
 #txtarea{
-    background: rgb(24,24,24);
+
     border: none;  
     outline: none;
-    color: rgb(243, 255, 23);
+    color: var(--cl4);
     border-radius: 10px;
-    width: 99.9%;
-    margin: 7px;
+    width: calc(100% - 10px);
     resize: none;
-    height: 400px;
+    height:calc(100vh - 16%) ;
     font-size: 17px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    background-color: var(--cl2);
+   
 }
 #form{
     position: fixed;
-    background-color:yellow;
-    border-radius: 10px;
-    width:70%;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
+    width:90%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     top: 0;
     left: 0;
-    bottom:0;
     right:0;
-    height: 500px;
+    height: 100vh;
     z-index: 9;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 120px;
-    transition: transform 200ms,filter 700ms;
-    box-shadow:0 0  40px 10px rgba(0, 0, 0, 0.151);
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
+    transition: 150ms ease-in;
+    background: var(--cl2);
     text-align: center;
-    padding: 13px;
     transform: scale(0);
+    border-radius: 10px;
+    outline: solid 2px rgba(0, 0, 0, 0.116);
 }
 #crea{
     display: block;
-    background-color:yellow;
+    background-color:transparent;
     border-radius: 10px;
-    width: 100px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    width: fit-content;
+    height: 25px;
     font-size: 20px;
-    color: rgb(43, 41, 41);
-    font-weight: 700;
+    line-height: 20px;
+    color: var(--cl3);
+    font-weight: 400;
     transition: 100ms;
     border: none;
     cursor: pointer;
-    background: rgb(202,107,0);
-    background: linear-gradient(139deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
+    margin-right: 5px;
+    font-family: 'Odibee Sans', cursive;
 }
 #crea:hover{
-    transform: scale(0.97);
-    
+   background-color: var(--cl3);
+    color: var(--cl1);
     
 }
 p{
     display: inline-block;
 }
-html {
-    scroll-behavior: smooth;
-  }
-
-body::-webkit-scrollbar {
-    width: 7px;
-background-color: rgba(58, 58, 58, 0.33);   
-    
-} 
-
-body::-webkit-scrollbar-thumb {   
-background-color: rgb(31, 31, 31);   
-border-radius: 4px;
-
-}
-#txt::-webkit-scrollbar {
-    width: 7px;
-background-color: rgba(58, 58, 58, 0);   
-    
-} 
-  
-#txt::-webkit-scrollbar-thumb {   
-background-color: rgb(31, 31, 31);   
-border-radius: 4px;
-
-}
-
 
 
 #notas::-webkit-scrollbar {
-    width: 0px;
-    background-color: rgba(58, 58, 58, 0.33);   
     display: none;
-    }
-
-
-
-
+}
 
 #notas{
-    top: 10px;
     overflow-y: auto;
-    margin-top: 2px;
-    height: 80vh;
-    width: 100%;
-    border-radius: 20px;
+    height:calc(100vh - 135px) ;
+    width: 90%;
     scroll-behavior: smooth;
-
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    position: absolute;
+    margin-top: 52px;
+    left: 0;
+    right: 0;
 }
 
 /* /////////// */
 #nota{
-    background-color: yellow;
-    color: rgb(255, 255, 255);
-    margin-top: 30px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    flex-grow: 1;
+    width: 30%;
+    height:270px;
+    margin: 9px;
     border-radius: 10px;
     padding-bottom: 9px;
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.172);
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
+    background: var(--cl2);
     cursor: pointer;
-  
-        
-
-}
-#nota:hover{
-    transition: 200ms;
-   background: linear-gradient(54deg, rgba(255,255,24,1) 19%, rgba(173,63,0,1) 100%);
+    border: solid 2px var(--cl2);
+    color: var(--cl3);
+    outline: solid 2px rgba(0, 0, 0, 0.171);
 }
 
-.edit{
-    
 
-    display: block;
-    border: none;
-    height: 34px;
-    border-radius: 10px;
-    width: 34px;
-    background-color: rgb(255, 255, 0);
-    cursor: pointer;
-    float: right;
-    margin-right: 47px;
-    margin-top: -35px;
-    cursor: pointer;
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
-
-   
-     
-}
-.edit img{
-    display: block;
-    width: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.edit:hover  img{
-    filter:invert(20%);
-    transform: scale(0.90);
-
-}
-.edit:active{
-
-   background: linear-gradient(313deg, rgba(255,255,0,1) 0%, rgba(202,107,0,1)  100%);
-}
 .delete{
     
 
@@ -447,18 +327,13 @@ border-radius: 4px;
     height: 34px;
     border-radius: 10px;
     width: 34px;
-    background-color: rgb(255, 255, 0);
     cursor: pointer;
     float: right;
     margin-right: 10px;
     margin-top: -35px;
     cursor: pointer;
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
-   
+    background-color: var(--cl1);
+    outline: solid 2px rgba(0, 0, 0, 0.171);
      
 }
 .delete img{
@@ -466,15 +341,11 @@ border-radius: 4px;
     width: 20px;
     margin-left: auto;
     margin-right: auto;
-}
-.delete:hover  img{
-    filter:invert(20%);
-    transform: scale(0.90);
-
+    opacity: 45%;
 }
 .delete:active{
 
-   background: linear-gradient(313deg, rgba(255,255,0,1) 0%, rgba(202,107,0,1)  100%);
+   background: linear-gradient(313deg, var(--cl3) 0%, var(--cl2)  100%);
 }
 #espaço{
     height: 10px;
@@ -488,50 +359,44 @@ border-radius: 4px;
     padding-right: 10px;
     text-align: center;
     float: right;
-    background-color: yellow;
-    color: rgb(24, 24, 24);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
+    background-color: var(--cl3);
+    color: var(--cl1);
+    font-family: 'Odibee Sans', cursive;
+    color: var(--cl4);
+
 }
 #nota h2{
-    background-color: rgb(24, 24, 24);
+    font-family:consolas;
     border-radius: 10px;
-    height: 38px;
-    font-size: 20px;
+    font-size: 17px;
     text-align: left;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 6px;
     margin-top: 0px;
     background-size: 100px;
-    background-image: url(icones/backtexture.png);
+    background-color: var(--cl3);
+    color: var(--cl1);
+    letter-spacing: 1px;
+    font-family: 'Odibee Sans', cursive;
+    font-weight: 400;
 }
 
-#nota:hover .notebody{
-    filter: grayscale(1);
 
-}
+
 #nota:hover{
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.13);
-}
-#nota:active{
-    filter: brightness(90%);
-    border-top: solid 0.5px rgba(202,107,0,1) ;
-    border-left: solid 0.5px rgba(202,107,0,1);
-    border-right:  solid 0.5px yellow;
-    border-bottom:  solid 0.5px yellow;
+    outline:solid 2px var(--cl3);
 }
 #nota #txt{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(24, 24, 24);
+
+    color: var(--cl3);
     padding-left: 10px;
     margin-left: auto;
     margin-right: auto;
     resize: none;
-    width: 60%;
-    height: 20px;
+    width: 90%;
+    height: 210px;
     background-color: transparent;
-    font-size: 17px;
+    font-size: 15px;
+    font-family: consolas;
     align-self: center;
     outline: none;
     border: none;
@@ -540,198 +405,17 @@ border-radius: 4px;
     overflow-y: hidden;
     cursor: pointer;
 }
-#exibir{
-    text-align: center;
-    width: 60%;
-    background-color: rgb(28, 28, 28);
-    height: 520px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 160px;
-    border-radius: 10px;
-    z-index: 200;
-    transition:transform 200ms ,filter 500ms ;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
-    box-shadow:0 0  40px 10px rgba(0, 0, 0, 0.151);
-    filter: opacity(0px);
-    transform: scale(0);
 
-}
-
-
-/*  */
-#exibir #txt{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    padding-left: 10px;
-    resize: none;
-    width: 90%;
-    height: 400px;
-    background-color: transparent;
-    font-size: 17px;
-    align-self: center;
-    outline: none;
-    border: none;
-    display: block;
-    border-radius: 10px;
-
-}
-#exibir h2{
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-    background-color:yellow;
-    border-radius: 10px;
-    height: 39px;
-    font-size: 20px;
-    text-align: left;
-    padding-left: 10px;
-    margin-top: 0;
-    padding-top: 10px;
-    border-top: solid 2px rgb(24, 24, 24);
-    border-left: solid 2px rgb(24, 24, 24);
-    border-right: solid 2px rgb(24, 24, 24);
-}
-#exibir h1{
-    display: none;
-    border-radius: 10px;
-    height: 25px;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    text-align: center;
-    float: right;
-    background-color: yellow;
-    color: rgb(24, 24, 24);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-}
-#exibir .delete{
-    background-color: blue;
-    z-index: 200;
-}
-/*  */
-#close{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: yellow;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    top: 10px;
-    width: 32px;
-    height: 32px;
-    right: 10px;
-    background-color: rgb(26, 26, 26);
-    text-align: center;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 0px;
-    cursor: pointer;
-    border: solid 1px rgba(255, 255, 0, 0);
-    background-image: url(icones/x.png);
-    background-size: 22px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#close:hover{
-    transition: 100ms;
-    background-color: rgb(255, 0, 0);
-
-}
-
-/*/*  */
-/*#nota .edit{
- background-color: rgb(237, 237, 237);
- position: absolute;
- margin-left: 10px;
- color:white;
- height: 34px;
- width: 34px;
- border-radius: 10px;
- border: none;
- background-image: url(https://cdn-icons-png.flaticon.com/512/84/84380.png);
- background-size: 16px;
- filter: invert(100%);
- background-repeat: no-repeat;
- background-position: center;
- font-size: 0;
- cursor: pointer;
- margin-top: 0px;
-}
-#nota .edit:hover{
-    transition: 200ms;
-    filter: invert(0%);
-    box-shadow:inset 0 0 0px 3px rgb(22, 22, 22);
-}*/
-/*#exibir .edit{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    font-size: 20px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 84px;
-    height: 39px;
-    border-radius: 10px;
-    border: none;
-    height: 28px;
-    background-color:yellow ;
-    color:rgb(24, 24, 24) ;
-    font-weight: 900;
-    border: solid 2px transparent;
-    line-height: 25px;
-    background: rgb(255,255,0);
-    background: linear-gradient(313deg, rgba(202,107,0,1) 0%, rgba(255,255,0,1) 100%);
-}
-#exibir .edit:hover{
-    background-color: rgb(24, 24, 24);
-    border: solid 2px yellow;
-    color: yellow;
-    
-}*/
 #bomy{
-transition-delay: 200ms;
-transition:filter ;
+    transition-delay: 200ms;
+    transition:filter ;
 
 }
-/*aviso*/
-#aviso{
-    color: yellow;
-    background-color: green;
-    position: absolute;
-    z-index: 99;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;   
-    padding: 4px 20px;
-    background-color: rgb(20, 20, 20);
-    top: -90px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px red;
-    background: linear-gradient(125deg, rgba(11,11,11,1) 0%, rgba(20,20,20,1) 35%, rgba(255,0,0,1) 100%);
-    transition: 200ms;
-    text-align: center;
-}
+
 #aviso2{
-    color: yellow;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--cl1);
+    font-family: consolas;
     position: absolute;
-    background: linear-gradient(313deg, rgba(25,25,25,1) 0%, rgba(255,0,0,1) 100%);
     position: absolute;
     z-index: 99;
     width: 60%;
@@ -741,22 +425,18 @@ transition:filter ;
     margin-right: auto;
     left: 0;
     right: 0;
-    font-size: 17px;
+    font-size: 27px;
     text-align: center;
     top: 40vh;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
     transform: scaleY(0);
     transition: 200ms;
-    box-shadow: 0px 10px 44px -1px rgba(31,23,10,0.54);
     background-size: 150px;
-    background-image: url(icones/backtexture.png);
-    background-color: rgba(20, 20, 20, 0.80);
-
+    font-family: 'Odibee Sans', cursive;
+    background-color: rgba(0, 0, 0, 0.267);
+    outline:solid 2px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.158);
 }
-.bbb{
+.options{
     cursor: pointer;
     width: 80px;
     border-radius: 10px;
@@ -767,63 +447,50 @@ transition:filter ;
     padding: 7px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#bb1{
-    color: yellow;
-    background-color: red;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
+#optionYes{
+    color: var(--cl1);
+    background-color: var(--red);
+    border:none;
+    outline: solid 2px rgba(250, 250, 250, 0.329);
 }
 
-.bbb:active{
+.options:active{
     border-color: transparent;
     transform: scale(0.97);
 }
-#bb2{
-    color: yellow;
+#optionNo{
+    border: none;
+    color: var(--cl1);
     background-color: rgb(27, 27, 27);
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px yellow;
-    border-top:  solid 0.5px yellow;
+    outline: solid 2px rgba(250, 250, 250, 0.329);
 }
 #aviso3{
-    color: yellow;
-    background-color: green;
+    font-family: 'Odibee Sans', cursive;
+    color: var(--cl1);
     position: absolute;
     z-index: 99;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;   
+    border-radius: 10px;
     padding: 4px 20px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgba(0, 0, 0, 0.308);
     top: -90px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px red;
-    background: linear-gradient(125deg, rgba(11,11,11,1) 0%, rgba(20,20,20,1) 35%, rgba(0,255,0,0) 100%);
+    width: 100px;
     transition: 200ms;
     text-align: center;
+    outline: solid 2px rgba(250, 250, 250, 0.329);
+    font-size: 20px;
 }
 #emp{
-    color: rgb(121, 121, 121);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--cl3);
+    font-family: 'Odibee Sans', cursive;
     width: 200px;
     margin: auto;
     border-radius: 10px;
     text-align: center;
-    background-color: brown;
     margin-top: 20px;
-    border-top:solid 0.5px rgb(255, 255, 0) ;
-    border-bottom: solid 0.5px rgba(202,107,0,1) ;
-    border-right: solid 0.5px rgba(202,107,0,1);
-    border-left:  solid 0.5px rgb(255, 255, 0);
-    background: linear-gradient(125deg,rgba(255, 255, 0, 0.185) 0%, rgba(20,20,20,1) 35%, rgba(0,255,0,0) 100%);
-    backdrop-filter: blur(2px);
+
     text-transform: capitalize;
 }
