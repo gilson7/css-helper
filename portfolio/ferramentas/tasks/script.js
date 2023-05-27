@@ -142,6 +142,7 @@ function noteDelete(index){
         notaObj.splice(index,1);
         localStorage.setItem("mnote",JSON.stringify(notaObj))
         exibir()
+        deletConfirm = false
     }
 }
 function animacao(ativi,element){
@@ -216,5 +217,5 @@ function anmEdit(){
    anm.addEventListener('finish', function() {
  });
 }
-// função mostra as notas
+// função lista e  mostra as notas
 exibir()
